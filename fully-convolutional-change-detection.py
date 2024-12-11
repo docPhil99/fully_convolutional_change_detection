@@ -68,7 +68,9 @@ print('IMPORTS OK')
 #%%
 # Global Variables' Definitions
 
-PATH_TO_DATASET = '/home/phil/datasets/Onera/Onera Satellite Change Detection dataset - Images/'
+#PATH_TO_DATASET = '/home/phil/datasets/Onera/Onera Satellite Change Detection dataset - Images/'
+PATH_TO_DATASET = '/home/phil/FourTB/data_sets/Onera/Onera Satellite Change Detection dataset - Images/'
+
 IS_PROTOTYPE = False
 
 FP_MODIFIER = 10 # Tuning parameter, use 1 if unsure
