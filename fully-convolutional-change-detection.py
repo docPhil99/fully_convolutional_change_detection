@@ -52,7 +52,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm as tqdm
 from pandas import read_csv
 from math import floor, ceil, sqrt, exp
-from IPython import display
+#from IPython import display
 import time
 from itertools import chain
 import time
@@ -525,8 +525,8 @@ def train(n_epochs = N_EPOCHS, save = True):
 #         plt.gcf().gca().set_ylim(bottom = 0)
         plt.gcf().gca().set_xlim(left = 0)
         plt.title('Loss')
-        display.clear_output(wait=True)
-        display.display(plt.gcf())
+        #display.clear_output(wait=True)
+        #display.display(plt.gcf())
 
         plt.figure(num=2)
         plt.clf()
@@ -538,8 +538,8 @@ def train(n_epochs = N_EPOCHS, save = True):
 #         plt.gcf().gca().set_ylim(bottom = 0)
 #         plt.gcf().gca().set_xlim(left = 0)
         plt.title('Accuracy')
-        display.clear_output(wait=True)
-        display.display(plt.gcf())
+        #display.clear_output(wait=True)
+        #display.display(plt.gcf())
 
         plt.figure(num=3)
         plt.clf()
@@ -553,8 +553,8 @@ def train(n_epochs = N_EPOCHS, save = True):
 #         plt.gcf().gca().set_ylim(bottom = 0)
 #         plt.gcf().gca().set_xlim(left = 0)
         plt.title('Accuracy per class')
-        display.clear_output(wait=True)
-        display.display(plt.gcf())
+        #display.clear_output(wait=True)
+        #display.display(plt.gcf())
 
         plt.figure(num=4)
         plt.clf()
@@ -570,8 +570,8 @@ def train(n_epochs = N_EPOCHS, save = True):
 #         plt.gcf().gca().set_ylim(bottom = 0)
 #         plt.gcf().gca().set_xlim(left = 0)
         plt.title('Precision, Recall and F-measure')
-        display.clear_output(wait=True)
-        display.display(plt.gcf())
+        #display.clear_output(wait=True)
+        #display.display(plt.gcf())
         
         
 #         mean_acc = (epoch_test_nochange_accuracy[epoch_index] + epoch_test_change_accuracy[epoch_index])/2
