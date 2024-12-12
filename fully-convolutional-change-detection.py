@@ -85,7 +85,7 @@ TRAIN_STRIDE = int(PATCH_SIDE/2) - 1
 
 TYPE = 3 # 0-RGB | 1-RGBIr | 2-All bands s.t. resulution <= 20m | 3-All bands
 
-LOAD_TRAINED = False
+LOAD_TRAINED = True
 
 DATA_AUG = True
 
@@ -751,7 +751,10 @@ def save_test_results(dset):
             out = net(I1, I2)
             _, predicted = torch.max(out.data, 1)
             I = np.stack((255*cm,255*np.squeeze(predicted.cpu().numpy()),255*cm),2)
-            io.imsave(f'{net_name}-{name}.png',I)
+            try:
+                io.imsave(f'{net_name}-{name}.png',I.astype(np.uint8))
+            except TypeError as e:
+                print(f"Error: {e}")
 
 
 
